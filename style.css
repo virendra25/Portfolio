@@ -1,0 +1,1533 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:ital@1&family=Joan&family=Philosopher&family=Playfair+Display&family=Rajdhani:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: silver;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: goldenrod;
+}
+
+section {
+    padding: 100px 0;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.about .about-content,
+.Education .serv-content,
+.Projects .serv-content,
+.skills .skills-content,
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 23px;
+    left: 50%;
+    width: 212px;
+    height: 1px;
+    background: #111;
+    transform: translateX(-50%)
+}
+
+section .title::after {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: currentColor;
+    padding: 0 5px;
+    background: radial-gradient(silver, transparent);
+    transform: translateX(-50%);
+    text-transform: uppercase;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    padding: 15px 0;
+    background: linear-gradient(to right, white, silver);
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: black;
+    margin-left: 14px;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: goldenrod;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #fff;
+}
+
+.image-frame {
+    width: 195px;
+    height: 205px;
+    background-image: url(me3.jpg);
+    background-position: bottom;
+    background-size: cover;
+    border: 5px solid #FFFFFF;
+    border-radius: 27%;
+    position: absolute;
+    top: 148px;
+    left: 38%;
+    transform: translateX(-50%);
+}
+
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: linear-gradient(45deg, silver, transparent);
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-up-btn:hover {
+    filter: brightness(90%);
+}
+
+.home {
+    display: flex;
+    background: url("img21.jpg") no-repeat center;
+    width: 100%;
+    height: 100vh;
+    color: unset;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.home .max-width {
+    width: 100%;
+    margin-top: 44px;
+    margin-left: 580px;
+    display: flex;
+}
+
+.home .max-width .row {
+    margin-right: 0;
+}
+
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+
+.home .home-content .text-2 {
+    font-size: 60px;
+    font-weight: 500;
+    margin-left: -3px;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.home .home-content .text-3 {
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    color: crimson;
+    font-weight: 500;
+}
+
+.home .home-content a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.home .home-content a:hover {
+    color: crimson;
+    background: none;
+}
+
+.about .title::after {
+    content: "who i am";
+}
+
+.about .about-content .right {
+    width: 100%;
+    text-align: center;
+}
+
+.about .about-content .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right .text span {
+    color: crimson;
+}
+
+.about .about-content .right p {
+    text-align: center;
+}
+
+.about .about-content .right a {
+    display: inline-block;
+    background: linear-gradient(45deg, black, transparent);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid gainsboro;
+    transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover {
+    color: aquamarine;
+    background: linear-gradient(to left, grey, black);
+}
+
+.Education,
+.Projects {
+    color: #fff;
+    background: #111;
+}
+
+.Education .title::before,
+.Projects .title::before {
+    background: #fff;
+}
+
+.Education .title::after {
+    content: "What Are My Qualifications";
+}
+
+.Education .serv-content .card {
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Education .serv-content .card:hover {
+    background: linear-gradient(to left, grey, black);
+}
+
+.Education .serv-content .card .box {
+    transition: all 0.3s ease;
+}
+
+.Education .serv-content .card:hover .box {
+    transform: scale(1.05);
+}
+
+.Education .serv-content .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+.skills .title::after {
+    content: "What I Know";
+}
+
+.skills .skills-content .column {
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content .Prop .bars {
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .Prop .info {
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-content .Prop span {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.skills .skills-content .Prop .line {
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+.skills .skills-content .Prop .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: radial-gradient(black, transparent);
+}
+
+.skills-content .Prop .html::before {
+    width: 90%;
+}
+
+.skills-content .Prop .css::before {
+    width: 60%;
+}
+
+.skills-content .Prop .js::before {
+    width: 20%;
+}
+
+.skills-content .Prop .php::before {
+    width: 30%;
+}
+
+.skills-content .Prop .mysql::before {
+    width: 30%;
+}
+
+.skills-content .Prop .c::before {
+    width: 80%;
+}
+
+.skills-content .Prop .cpp::before {
+    width: 80%;
+}
+
+.skills-content .Prop .java::before {
+    width: 70%;
+}
+
+.skills-content .Prop .dsa::before {
+    width: 30%;
+}
+
+.skills-content .Prop .bootstrap::before {
+    width: 20%;
+}
+
+.Projects .title::after {
+    content: "My work";
+}
+
+.Projects .serv-content .card {
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.Projects .serv-content .card:hover {
+    background: linear-gradient(to left, grey, black);
+}
+
+.Projects .serv-content .card .box {
+    transition: all 0.3s ease;
+}
+
+.Projects .serv-content .card:hover .box {
+    transform: scale(1.05);
+}
+
+.Projects .serv-content .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+a {
+    color: rgb(241, 87, 87);
+}
+
+.contact .title::after {
+    content: "get in touch";
+}
+
+.contact .contact-content .column {
+    width: calc(50% - 30px);
+}
+
+.contact .contact-content .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact .contact-content .left p {
+    text-align: justify;
+}
+
+.contact .contact-content .left .icons {
+    margin: 10px 0;
+}
+
+.contact .contact-content .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact .contact-content .row .info {
+    margin-left: 23px;
+}
+
+.contact .contact-content .info .head {
+    font-weight: 500;
+}
+
+.contact .contact-content .info .stb {
+    color: #333;
+}
+
+.contact .right form .fields {
+    display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact .right form .textarea {
+    height: 80px;
+    width: 100%;
+}
+
+.contact .right form .name {
+    margin-right: 10px;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus {
+    border-color: #b3b3b3;
+}
+
+.contact .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
+}
+
+.contact .right form .button-area {
+    display: flex;
+    align-items: center;
+}
+
+.right form .button-area button {
+
+    background: linear-gradient(45deg, black, transparent);
+    color: #fff;
+    display: block;
+    width: 160px !important;
+    height: 45px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+
+    border: 2px solid gainsboro;
+    transition: all 0.3s ease;
+}
+
+.right form .button-area button:hover {
+    color: aquamarine;
+    background: linear-gradient(to left, grey silver);
+}
+
+footer {
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+
+.sec2-icons {
+    font-size: 42px;
+    margin-top: 30px;
+}
+
+.social-icons {
+    color: #FFFFFF;
+    margin: 0px 129px 0px 144px;
+}
+
+nav .icon-burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav .icon-burger .line {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+    .me {
+        display: none;
+        position: absolute;
+        background: linear-gradient(to left, gray, silver);
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .me li:hover {
+        display: inline-block;
+        background: linear-gradient(45deg, black, transparent);
+        transition: 0.3s ease;
+    }
+
+    .me li+li {
+        margin-top: 12px;
+    }
+
+    input[type=checkbox]:checked~.me {
+        display: block;
+    }
+
+    .hamburger {
+        width: 100%;
+        display: block;
+        margin: -36px 0px 0px 153px;
+    }
+
+    .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+
+    .dropdown li:hover {
+        background: linear-gradient(45deg, black, transparent);
+    }
+
+    .max-width {
+        padding: 0 23px;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        padding: 30px 0px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar.sticky {
+        padding: 15px 0;
+        background: linear-gradient(to right, white, silver);
+    }
+
+    .navbar .max-width {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar .logo a {
+        color: black;
+        margin-left: 14px;
+        font-size: 35px;
+        font-weight: 600;
+        font-family: 'Philosopher', sans-serif;
+    }
+
+    .navbar .menu {
+        padding: 5px 10px;
+        position: fixed;
+        height: 101vh;
+        width: 100%;
+        left: 0%;
+        top: 66px;
+        text-align: center;
+        padding-top: 0px;
+        transition: all .5s;
+    }
+
+    .navbar .menu.menu-btn {
+        left: 265px;
+        width: 127px;
+        height: auto;
+        background: linear-gradient(to left, grey, black);
+    }
+
+    .navbar .menu li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+
+    }
+
+    .navbar .menu li a {
+        display: block;
+        margin: 20px 0;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 22px;
+        transition: color 0.3s ease;
+    }
+
+    a:hover,
+    a.menu-btn {
+        background: none;
+        color: goldenrod;
+    }
+
+    .menu-btn {
+        color: #fff;
+        font-size: 23px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .scroll-up-btn {
+        position: fixed;
+        height: 45px;
+        width: 42px;
+        background: linear-gradient(45deg, silver, transparent);
+        right: 30px;
+        bottom: 10px;
+        text-align: center;
+        line-height: 45px;
+        color: #fff;
+        z-index: 9999;
+        font-size: 30px;
+        border-radius: 6px;
+        border-bottom-width: 2px;
+        cursor: pointer;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+
+    .scroll-up-btn.show {
+        bottom: 30px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .scroll-up-btn:hover {
+        filter: brightness(90%);
+    }
+
+    .image-frame {
+        top: 100px;
+        left: 27%;
+        width: 182px;
+        height: 209px;
+        border: 6px solid #FFFFFF;
+    }
+
+    .home {
+        display: flex;
+        background: url("./5570863.jpg") no-repeat center;
+        width: 100%;
+        height: 100vh;
+        color: unset;
+        min-height: 500px;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 60px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 32px;
+    }
+
+    .home .home-content a {
+        font-size: 20px;
+        padding: 10px 30px;
+    }
+
+    .max-width {
+        max-width: 930px;
+        padding: 0 23px;
+    }
+
+    .home .max-width {
+        width: 100%;
+        margin-top: 286px;
+        margin-left: 14px;
+        display: flex;
+    }
+
+    .about .about-content .column {
+        width: 100%;
+    }
+
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .about-content .left img {
+        height: 350px;
+        width: 350px;
+    }
+
+    .about .about-content .right {
+        flex: 100%;
+    }
+
+    .Education .title::after {
+        background: #111;
+        width: 100%;
+        content: "What Are My Qualifications";
+    }
+
+    .Education .serv-content .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .Education .serv-content .card:hover .box {
+        transform: scale(1.05);
+    }
+
+    .Education .serv-content .card:hover {
+        background: linear-gradient(to left, grey, black);
+    }
+
+    .Projects .title::after {
+        background: #111;
+        width: 100%;
+        content: "My Work";
+    }
+
+    .Projects .serv-content .card {
+        width: 100%;
+        background: #222;
+        text-align: center;
+        border-radius: 6px;
+        padding: 50px 25px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .Projects .serv-content .card:hover {
+        background: linear-gradient(to left, grey, black);
+    }
+
+    .Projects .serv-content .card:hover .box {
+        transform: scale(1.05);
+    }
+
+    .skills .skills-content .column,
+    .contact .contact-content .column {
+        width: 100%;
+    }
+
+    .about .about-content .right .text,
+    .skills .skills-content .left .text {
+        font-size: 19px;
+    }
+
+    .about .about-content,
+    .Education .serv-content,
+    .Projects .serv-content,
+    .skills .skills-content,
+    .contact .contact-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .contact .right form .fields {
+        flex-direction: column;
+    }
+
+    .contact .right form .name,
+    .contact .right form .email {
+        margin: 0;
+    }
+
+    .right form {
+        width: 150px;
+    }
+
+    .scroll-up-btn {
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+
+    .contact .right form .field input,
+    .contact .right form .textarea textarea {
+        height: 100%;
+        width: 340px;
+        border: 1px solid lightgrey;
+        border-radius: 6px;
+        outline: none;
+        padding: 0 15px;
+        font-size: 17px;
+        transition: all 0.3s ease;
+    }
+
+    .social-icons {
+        color: #FFFFFF;
+        margin: 0px 30px 0px 30px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+}
+
+
+@media (max-width: 426px) {
+    .me {
+        display: none;
+        position: absolute;
+        background: linear-gradient(to left, gray, silver);
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .me li:hover {
+        display: inline-block;
+        background: linear-gradient(45deg, black, transparent);
+        transition: 0.3s ease;
+    }
+
+    .me li+li {
+        margin-top: 12px;
+    }
+
+    input[type=checkbox]:checked~.me {
+        display: block;
+    }
+
+    .hamburger {
+        width: 100%;
+        display: block;
+        margin: -36px 0px 0px 153px;
+    }
+
+    .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+
+    .dropdown li:hover {
+        background: linear-gradient(45deg, black, transparent);
+    }
+
+    .max-width {
+        padding: 0 23px;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        padding: 30px 0px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .navbar .menu {
+        padding: 5px 10px;
+        position: fixed;
+        height: 101vh;
+        width: 100%;
+        left: 0%;
+        top: 66px;
+        text-align: center;
+        padding-top: 0px;
+        transition: all .5s;
+    }
+
+    .navbar .menu.menu-btn {
+        left: 265px;
+        width: 127px;
+        height: auto;
+        background: linear-gradient(to left, grey, black);
+    }
+
+    .navbar .menu li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 22px;
+    }
+
+    a:hover,
+    a.menu-btn {
+        background: none;
+        color: goldenrod;
+    }
+
+    .menu-btn {
+        color: #fff;
+        font-size: 23px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .scroll-up-btn {
+        position: fixed;
+        height: 45px;
+        width: 42px;
+        background: linear-gradient(45deg, silver, transparent);
+        right: 30px;
+        bottom: 10px;
+        text-align: center;
+        line-height: 45px;
+        color: #fff;
+        z-index: 9999;
+        font-size: 30px;
+        border-radius: 6px;
+        border-bottom-width: 2px;
+        cursor: pointer;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+
+    .scroll-up-btn.show {
+        bottom: 30px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .scroll-up-btn:hover {
+        filter: brightness(90%);
+    }
+
+    .image-frame {
+        top: 100px;
+        left: 27%;
+        width: 182px;
+        height: 209px;
+        border: 6px solid #FFFFFF;
+    }
+
+    .home {
+        display: flex;
+        background: url("./5570863.jpg") no-repeat center;
+        width: 100%;
+        height: 100vh;
+        color: unset;
+        min-height: 500px;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 60px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 32px;
+    }
+
+    .home .home-content a {
+        font-size: 20px;
+        padding: 10px 30px;
+    }
+
+    .max-width {
+        max-width: 930px;
+        padding: 0 23px;
+    }
+
+    .home .max-width {
+        width: 100%;
+        margin-top: 286px;
+        margin-left: 14px;
+        display: flex;
+    }
+
+    .about .about-content .column {
+        width: 100%;
+    }
+
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .about-content .left img {
+        height: 350px;
+        width: 350px;
+    }
+
+    .about .about-content .right {
+        flex: 100%;
+    }
+
+    .Education .title::after {
+        background: #111;
+        width: 100%;
+        content: "What Are My Qualifications";
+    }
+
+    .Education .serv-content .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .Education .serv-content .card:hover .box {
+        transform: scale(1.05);
+    }
+
+    .Education .serv-content .card:hover {
+        background: linear-gradient(to left, grey, black);
+    }
+
+    .Projects .title::after {
+        background: #111;
+        width: 100%;
+        content: "My Work";
+    }
+
+    .Projects .serv-content .card {
+        width: 100%;
+        background: #222;
+        text-align: center;
+        border-radius: 6px;
+        padding: 50px 25px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .Projects .serv-content .card:hover {
+        background: linear-gradient(to left, grey, black);
+    }
+
+    .Projects .serv-content .card:hover .box {
+        transform: scale(1.05);
+    }
+
+    .skills .skills-content .column,
+    .contact .contact-content .column {
+        width: 100%;
+    }
+
+    .about .about-content .right .text,
+    .skills .skills-content .left .text {
+        font-size: 19px;
+    }
+
+    .about .about-content,
+    .Education .serv-content,
+    .Projects .serv-content,
+    .skills .skills-content,
+    .contact .contact-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .contact .right form .fields {
+        flex-direction: column;
+    }
+
+    .contact .right form .name,
+    .contact .right form .email {
+        margin: 0;
+    }
+
+    .right form {
+        width: 150px;
+    }
+
+    .scroll-up-btn {
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+
+    .contact .right form .field input,
+    .contact .right form .textarea textarea {
+        height: 100%;
+        width: 340px;
+        border: 1px solid lightgrey;
+        border-radius: 6px;
+        outline: none;
+        padding: 0 15px;
+        font-size: 17px;
+        transition: all 0.3s ease;
+    }
+
+    .social-icons {
+        color: #FFFFFF;
+        margin: 0px 16px 0px 18px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .me {
+        display: none;
+        position: absolute;
+        background: linear-gradient(to left, gray, silver);
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .me li:hover {
+        display: inline-block;
+        background: linear-gradient(45deg, black, transparent);
+        transition: 0.3s ease;
+    }
+
+    .me li+li {
+        margin-top: 12px;
+    }
+
+    input[type=checkbox]:checked~.me {
+        display: block;
+    }
+
+    .hamburger {
+        width: 100%;
+        display: block;
+        margin: -36px 0px 0px 153px;
+    }
+
+    .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+
+    .dropdown li:hover {
+        background: linear-gradient(45deg, black, transparent);
+    }
+
+    .max-width {
+        padding: 0 23px;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        padding: 30px 0px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .navbar .menu {
+        padding: 5px 10px;
+        position: fixed;
+        height: 101vh;
+        width: 100%;
+        left: 0%;
+        top: 66px;
+        text-align: center;
+        padding-top: 0px;
+        transition: all .5s;
+    }
+
+    .navbar .menu.menu-btn {
+        left: 265px;
+        width: 127px;
+        height: auto;
+        background: linear-gradient(to left, grey, black);
+    }
+
+    .navbar .menu li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 22px;
+    }
+
+    a:hover,
+    a.menu-btn {
+        background: none;
+        color: goldenrod;
+    }
+
+    .menu-btn {
+        color: #fff;
+        font-size: 23px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .scroll-up-btn {
+        position: fixed;
+        height: 45px;
+        width: 42px;
+        background: linear-gradient(45deg, silver, transparent);
+        right: 30px;
+        bottom: 10px;
+        text-align: center;
+        line-height: 45px;
+        color: #fff;
+        z-index: 9999;
+        font-size: 30px;
+        border-radius: 6px;
+        border-bottom-width: 2px;
+        cursor: pointer;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+
+    .scroll-up-btn.show {
+        bottom: 30px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .scroll-up-btn:hover {
+        filter: brightness(90%);
+    }
+
+    .image-frame {
+        top: 100px;
+        left: 27%;
+        width: 182px;
+        height: 209px;
+        border: 6px solid #FFFFFF;
+    }
+
+    .home {
+        display: flex;
+        background: url("./5570863.jpg") no-repeat center;
+        width: 100%;
+        height: 100vh;
+        color: unset;
+        min-height: 500px;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 60px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 32px;
+    }
+
+    .home .home-content a {
+        font-size: 20px;
+        padding: 10px 30px;
+    }
+
+    .max-width {
+        max-width: 930px;
+        padding: 0 23px;
+    }
+
+    .home .max-width {
+        width: 100%;
+        margin-top: 286px;
+        margin-left: 14px;
+        display: flex;
+    }
+
+    .about .about-content .column {
+        width: 100%;
+    }
+
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .about-content .left img {
+        height: 350px;
+        width: 350px;
+    }
+
+    .about .about-content .right {
+        flex: 100%;
+    }
+
+    .Education .title::after {
+        background: #111;
+        width: 100%;
+        content: "What Are My Qualifications";
+    }
+
+    .Education .serv-content .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .Education .serv-content .card:hover .box {
+        transform: scale(1.05);
+    }
+
+    .Education .serv-content .card:hover {
+        background: linear-gradient(to left, grey, black);
+    }
+
+    .Projects .title::after {
+        background: #111;
+        width: 100%;
+        content: "My Work";
+    }
+
+    .Projects .serv-content .card {
+        width: 100%;
+        background: #222;
+        text-align: center;
+        border-radius: 6px;
+        padding: 50px 25px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .Projects .serv-content .card:hover {
+        background: linear-gradient(to left, grey, black);
+    }
+
+    .Projects .serv-content .card:hover .box {
+        transform: scale(1.05);
+    }
+
+    .skills .skills-content .column,
+    .contact .contact-content .column {
+        width: 100%;
+    }
+
+    .about .about-content .right .text,
+    .skills .skills-content .left .text {
+        font-size: 19px;
+    }
+
+    .about .about-content,
+    .Education .serv-content,
+    .Projects .serv-content,
+    .skills .skills-content,
+    .contact .contact-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .contact .right form .fields {
+        flex-direction: column;
+    }
+
+    .contact .right form .name,
+    .contact .right form .email {
+        margin: 0;
+    }
+
+    .right form {
+        width: 150px;
+    }
+
+    .scroll-up-btn {
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+
+    .contact .right form .field input,
+    .contact .right form .textarea textarea {
+        height: 100%;
+        width: 340px;
+        border: 1px solid lightgrey;
+        border-radius: 6px;
+        outline: none;
+        padding: 0 15px;
+        font-size: 17px;
+        transition: all 0.3s ease;
+    }
+
+    .social-icons {
+        color: #FFFFFF;
+        margin: 0px 30px 0px 30px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+}
